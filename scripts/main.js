@@ -58,6 +58,7 @@ async function handleSubmit(e) {
   const nameInput  = form.querySelector('input[name="name"]');
   const phoneInput = form.querySelector('input[name="phone"]');
   const emailInput = form.querySelector('input[name="email"]');
+  const botFieldInput = form.querySelector('input[name="bot_field"]');
 
   [nameInput, phoneInput, emailInput].forEach(i => i.classList.remove('invalid'));
 
@@ -83,6 +84,7 @@ async function handleSubmit(e) {
     name: nameInput.value.trim(),
     phone: normalizePhone(phoneInput.value),
     email: emailInput.value.trim(),
+    bot_field: botFieldInput ? botFieldInput.value.trim() : '',
     source: location.href,
     timestamp: new Date().toISOString()
   };

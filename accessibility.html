@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0F0B08">
+  <title>הצהרת נגישות · מדיטציית הכסף</title>
+  <meta name="description" content="הצהרת נגישות של אתר מדיטציית הכסף והסדרי נגישות.">
+  
+  <link rel="canonical" href="https://www.yourdomain.co.il/accessibility.html">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23D4AF37'/%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/main.css?v=31">
+
+  <style>
+    .privacy-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 56px 20px 80px;
+      position: relative;
+      z-index: 2;
+    }
+    .privacy-wrap h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-primary);
+    }
+    .privacy-wrap .updated {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+    .privacy-wrap h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin: 32px 0 12px;
+      color: var(--text-primary);
+    }
+    .privacy-wrap p,
+    .privacy-wrap li {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+    .privacy-wrap ul {
+      padding-right: 22px;
+      margin: 8px 0 16px;
+    }
+    .privacy-wrap a { color: var(--accent-gold); }
+    .privacy-back {
+      display: inline-block;
+      margin-top: 32px;
+      padding: 12px 24px;
+      border-radius: 10px;
+      background: var(--cta-gradient);
+      color: #1A1410;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: var(--shadow-cta);
+    }
+    body.theme-light .privacy-wrap h1,
+    body.theme-light .privacy-wrap h2 { color: #2A1F1A; }
+    body.theme-light .privacy-wrap p,
+    body.theme-light .privacy-wrap li { color: #4A3F36; }
+    body.theme-light .privacy-wrap .updated { color: #6B5D54; }
+  </style>
+</head>
+<body class="theme-light">
+
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="brand">מדיטציית הכסף</a>
+  </div>
+</header>
+
+<main>
+  <div class="privacy-wrap">
+    <h1>הצהרת נגישות</h1>
+    <p class="updated">עודכן לאחרונה: מאי 2026</p>
+
+    <p>אנו רואים ערך עליון במתן שירות שוויוני, מכבד ונגיש לכלל הגולשות והגולשים, לרבות אנשים עם מוגבלויות, בהתאם לחוק שוויון זכויות לאנשים עם מוגבלות, תשנ"ח-1998 והתקנות על פיו. אנו משקיעים מאמצים כדי להנגיש את התכנים באתר ולהעניק חוויית גלישה מיטבית ועצמאית לכולם.</p>
+
+    <h2>רמת הנגישות ומהות ההנגשה באתר</h2>
+    <p>האתר נבנה והונגש במטרה לעמוד בהנחיות הנגישות למסמכי אינטרנט (WCAG 2.1) ברמה AA של קונסורציום הרשת הכלל עולמית (W3C), וכן בהתאם לתקן הישראלי ת"י 5568. ההנגשה מתייחסת בין היתר לרכיבים הבאים:</p>
+    <ul>
+      <li><strong>עיצוב ויזואלי וניגודיות:</strong> יחס הקונטרסט (ניגודיות) עומד בקריטריונים להקלה על קריאה. האתר עוצב בבירור ללא אלמנטים מרצדים באגרסיביות.</li>
+      <li><strong>אנימציות ותנועה (Reduced Motion):</strong> האתר תומך במנגנון מערכות ההפעלה (prefers-reduced-motion). גולשים המבקשים להימנע מתנועה (כגון אנימציית החלקיקים ברקע) יקבלו סביבה סטטית ורגועה באופן אוטומטי, ללא צורך בהגדרות מיוחדות.</li>
+      <li><strong>ניווט מקלדת ותאימות טכנולוגית:</strong> האתר מאפשר ביצוע ניווט מלא ושימוש בטופס הלידים באמצעות המקלדת בלבד (מקשי Tab ו-Shift+Tab) ובחירה באמצעות לחיצה על Enter.</li>
+      <li><strong>תמיכה בקוראי מסך:</strong> האתר מסומן בקוד סמנטי תקני (HTML5) על מנת לאפשר קריאה חלקה על ידי קוראי מסך (כגון NVDA או JAWS). נוספו תגיות Aria-hidden לאלמנטים עיצוביים שאינם מהותיים לתוכן הטקסטואלי במטרה לא להעמיס על התוכנה.</li>
+      <li><strong>רספונסיביות:</strong> האתר מותאם בסקייל מלא למגוון מכשירים — טלפונים סלולריים, טאבלטים ומסכי מחשב. ניתן להגדיל את התצוגה עד ל-200% לפחות ללא פגיעה במידע.</li>
+    </ul>
+
+    <h2>סייגים ותקלות (פטורים חלקיים)</h2>
+    <p>חשוב לציין כי האתר מופעל כעמוד נחיתה אינפורמטיבי יחיד על ידי עסק זעיר, ולפיכך עשויות לחול הקלות או פטורים טכנולוגיים לפי תקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות). עם זאת, אנו פועלים בתום לב ולמעלה מן הצורך להנגיש ככל שניתן מרצוננו החופשי. על אף המאמצים הרבים, ולמרות הבדיקות השוטפות, ייתכן ויתגלו אלמנטים מסוימים, סרטונים נטולי כתוביות סגורות מופרדות אידיאלית, או רכיבי צד-שלישי שטרם הונגשו במלואם לאור אילוצים טכנולוגיים.</p>
+
+    <h2>יצירת קשר עם רכז/ת נגישות</h2>
+    <p>אנו ממשיכים לבחון באופן עקבי את צרכי הנגישות תוך רצון לשפר כל העת. אם נתקלת בבעיית נגישות כלשהי באתר, קושי במילוי הטופס או חסר בעזרים — נשמח מאוד לשמוע ממך על מנת לתקן ולהנגיש באופן פרטני.</p>
+    <p>יש לפרט בפנייה את מהות התקלה, העמוד הרלוונטי, והמכשיר/הדפדפן באמצעותו בוצעה הגלישה.<br>
+    <strong>ניתן לפנות ישירות למייל:</strong> <a href="mailto:yuval144.888@gmail.com">yuval144.888@gmail.com</a> ואנו מתחייבים לטפל בפנייה בהקדם האפשרי.</p>
+
+    <a href="index.html" class="privacy-back">חזרה לדף הבית</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="footer-brand">מדיטציית הכסף</p>
+    <p class="footer-meta">© 2026 · כל הזכויות שמורות · <a href="privacy-policy.html">מדיניות פרטיות ותנאי שימוש</a> · <a href="accessibility.html">הצהרת נגישות</a></p>
+  </div>
+</footer>
+
+</body>
+</html>

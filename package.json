@@ -1,0 +1,11 @@
+{
+  "name": "yuval-boop",
+  "version": "1.0.0",
+  "description": "Vanilla HTML site with Resend API",
+  "dependencies": {
+    "resend": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

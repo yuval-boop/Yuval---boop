@@ -79,35 +79,38 @@ async function handleSubmit(e) {
   showMsg(form, '');
   setLoading(form, true);
 
-  const data = new FormData();
-  data.append('name',      nameInput.value.trim());
-  data.append('phone',     normalizePhone(phoneInput.value));
-  data.append('email',     emailInput.value.trim());
-  data.append('source',    location.href);
-  data.append('timestamp', new Date().toISOString());
-  data.append('form',      form.dataset.form || 'unknown');
+  const payload = {
+    name: nameInput.value.trim(),
+    phone: normalizePhone(phoneInput.value),
+    email: emailInput.value.trim(),
+    source: location.href,
+    timestamp: new Date().toISOString()
+  };
 
   if (DEBUG) {
     log('submitting:');
-    for (const [k, v] of data.entries()) log('  ', k, '=', v);
-    log('webhook:', WEBHOOK_URL);
-  }
-
-  if (!WEBHOOK_URL || WEBHOOK_URL.includes('GOOGLE_SHEETS_WEBHOOK')) {
-    const m = 'הטופס עדיין לא מחובר ל-Google Sheets. ראי HANDOFF.md.';
-    showMsg(form, DEBUG ? m + ' (DEBUG: WEBHOOK_URL empty)' : m);
-    setLoading(form, false);
-    return;
+    log(payload);
   }
 
   try {
-    await fetch(WEBHOOK_URL, { method: 'POST', mode: 'no-cors', body: data });
-    log('fetch completed (opaque response — treating as success)');
+    const res = await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    if (!res.ok) {
+      throw new Error(`Server returned ${res.status}`);
+    }
+
+    log('fetch completed (Success)');
     showMsg(form, 'מעולה! מעבירה אותך...', 'success');
     setTimeout(() => { window.location.href = REDIRECT_URL; }, 600);
   } catch (err) {
     log('fetch failed:', err);
-    const generic = 'אופס, משהו השתבש. נסי שוב או כתבי לנו.';
+    const generic = 'אופס, משהו השתבש עם האימייל. נסי שוב או כתבי לנו.';
     showMsg(form, DEBUG ? generic + ' (DEBUG: ' + (err && err.message || err) + ')' : generic);
     setLoading(form, false);
   }
@@ -260,6 +263,26 @@ document.querySelectorAll('form.lead-form').forEach(form => {
   btn.addEventListener('click', () => {
     const light = document.body.classList.toggle('theme-light');
     btn.textContent = light ? 'מצב כהה' : 'מצב בהיר';
+  });
+})();
+
+/* ----------------------------------------------------------------
+   COOKIE CONSENT POPUP
+   ---------------------------------------------------------------- */
+(function cookieConsent() {
+  const popup = document.getElementById('cookie-popup');
+  const btn = document.getElementById('cookie-accept');
+  if (!popup || !btn) return;
+  
+  if (!localStorage.getItem('cookies-accepted')) {
+    popup.style.display = 'flex';
+    popup.removeAttribute('aria-hidden');
+  }
+
+  btn.addEventListener('click', () => {
+    localStorage.setItem('cookies-accepted', 'true');
+    popup.style.display = 'none';
+    popup.setAttribute('aria-hidden', 'true');
   });
 })();
 

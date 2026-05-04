@@ -61,3 +61,55 @@
 ### חיבור למנועי חיפוש (Google Search Console)
 1. **Sitemap**: נוצר קובץ \sitemap.xml\ מסודר ובו פורטו דפי האתר שפתוחים לסריקה של גוגל. עמוד התודה (\	hank-you.html\) ועמוד השגיאה לא הוכנסו אליו כדי להבטיח פרטיות ולמנוע מעקף של טופס ההרשמה.
 2. **הוספה לאינדקס**: האתר חובר למנועי החיפוש בהצלחה לאינדוקס רשמי.
+
+---
+
+## סשן 2 — שיפורים טכניים, ביצועים והגנה משפטית (מאי 2026)
+
+### תיקון גלילה אופקית במובייל
+- הוסף `overflow-x: hidden` לאלמנט `html` (body בלבד לא חוסם גלילה ב-iOS Safari)
+- שינוי `width: 100vw` ל-`width: 100%` על `.hero-particles` (מניעת overflow של רוחב סקרולבר)
+
+### ניקוי קריאות 404 מיותרות לקבצי וידאו
+- הוסר `<link rel="preload">` לקובץ `intro-poster.jpg` שנמחק מה-repo
+- הובהר שקריאות ה-mp4 הן מ-cache של הדפדפן — הקוד עצמו היה כבר נקי
+
+### אופטימיזציית תמונות
+- `tiktok-proof.jpeg`: 195KB → 65KB (שינוי גודל מ-1190×2048 ל-523×900, איכות 80) באמצעות ImageMagick
+- `OG.jfif` → `OG.jpg`: המרה לפורמט JPEG תקני — הקובץ הישן נשמר לתאימות לאחור
+- הוספת `width="523" height="900"` לתגית `<img>` של tiktok-proof למניעת CLS
+- עדכון תגיות og:image ו-twitter:image ל-`OG.jpg`
+
+### Cache ו-Security Headers (netlify.toml)
+- HTML: `Cache-Control: public, no-cache` (הדפדפן תמיד בודק גרסה חדשה)
+- CSS/JS/תמונות: `Cache-Control: public, max-age=31536000, immutable` (קאש לשנה)
+- הוספת headers אבטחה לכל דפי HTML: `X-Content-Type-Options`, `X-Frame-Options: DENY`, `Referrer-Policy`
+
+### תיקון דומיין
+- החלפת כל המופעים של `https://www.yourdomain.co.il` ב-`https://yuval-alkobi.com` בשלושת קבצי ה-HTML
+- הסרת ה-comment `<!-- להחליף בדומיין האמיתי -->`
+
+### תיקון אינטראקטיביות וידאו במובייל (iOS Safari)
+- **שורש הבעיה:** `overflow: hidden` + `border-radius` על parent של iframe — באג ידוע ב-iOS Safari שגורם ל-iframe להיות לא-אינטראקטיבי
+- **תיקון:** הוסר `overflow: hidden` מ-`.video-stage` ומ-`.testimonial-video-frame`; ה-`border-radius` הועבר ישירות ל-iframes
+- הוסף `pointer-events: none` ל-`.video-callout` (חסם נגיעות בפינת וידאו הראשי)
+- נמחקה פונקציית JS מתה `heroVideoPlay()` (ניסתה לקרוא `.play()` על iframe)
+- נמחק CSS מת: `.video-play-btn`, `@keyframes playPulse`, כללי `::-webkit-media-controls`
+
+### שדרוג מקיף של מסמכי המשפט והפרטיות
+- **כותרת סעיף:** הוסרה המילה "ספאם" — שונה ל"הסכמה לדיוור שיווקי ישיר"
+- **שימוש בטלפון:** הובהר במפורש (SMS + WhatsApp); נוסף מנגנון opt-out לכל ערוץ עם מועד ביצוע (5 ימי עסקים)
+- **צדדים שלישיים:** צוינו בשמם: Resend, Netlify, BunnyNet, YouTube, Google Fonts
+- **סעיף עוגיות:** שוכתב לחלוטין — מדויק (localStorage + cookies צד-שלישי, ללא GA/FB Pixel)
+- **סעיף חדש:** תקופת שמירת מידע (5 שנים); מחויבות לטיפול בבקשות מחיקה תוך 30 יום
+- **הצהרת נגישות:** הטיעון "עומד ב-WCAG 2.1 AA" רוכך ל"שואף לעמוד"
+- **מייל רשמי:** עדכון כל המופעים מ-`yuval144.888@gmail.com` → `Yuvilevlev@gmail.com`
+- **Netlify function:** עדכון כתובת `to:` ב-`send.js` מ-`amityst12@gmail.com` → `Yuvilevlev@gmail.com`
+
+### שדרוג Cookie Popup
+- **טקסט:** מדויק כעת — מזכיר localStorage ושירותי צד-שלישי ספציפיים, ללא אזכור כלי מעקב שלא קיימים
+- **כפתור דחייה:** נוסף "המשך ללא אישור" (תיקון dark pattern)
+- **JS:** שומר `cookie-choice: accepted|declined` עם תאימות לאחור למפתח הישן `cookies-accepted`
+
+### גרסת CSS
+- עדכון `main.css?v=31` → `?v=32` בכל קבצי ה-HTML

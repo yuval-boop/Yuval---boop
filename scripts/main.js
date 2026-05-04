@@ -239,24 +239,6 @@ document.querySelectorAll('form.lead-form').forEach(form => {
 })();
 
 /* ----------------------------------------------------------------
-   HERO VIDEO PLAY BUTTON — custom centered overlay
-   ---------------------------------------------------------------- */
-(function heroVideoPlay() {
-  const video = document.querySelector('.hero-video');
-  const btn = document.querySelector('.video-play-btn');
-  const stage = document.querySelector('.video-stage');
-  if (!video || !btn || !stage) return;
-  function toggle() {
-    if (video.paused) video.play().catch(() => {});
-    else video.pause();
-  }
-  btn.addEventListener('click', (e) => { e.stopPropagation(); toggle(); });
-  stage.addEventListener('click', toggle);
-  video.addEventListener('play', () => btn.classList.add('is-hidden'));
-  video.addEventListener('pause', () => btn.classList.remove('is-hidden'));
-})();
-
-/* ----------------------------------------------------------------
    THEME TOGGLE — switch between dark and light/cream
    ---------------------------------------------------------------- */
 (function themeToggle() {
@@ -273,19 +255,33 @@ document.querySelectorAll('form.lead-form').forEach(form => {
    ---------------------------------------------------------------- */
 (function cookieConsent() {
   const popup = document.getElementById('cookie-popup');
-  const btn = document.getElementById('cookie-accept');
-  if (!popup || !btn) return;
-  
-  if (!localStorage.getItem('cookies-accepted')) {
+  const acceptBtn = document.getElementById('cookie-accept');
+  const declineBtn = document.getElementById('cookie-decline');
+  if (!popup || !acceptBtn) return;
+
+  // backwards-compatible: honour old 'cookies-accepted' key
+  const alreadyChose = localStorage.getItem('cookie-choice') || localStorage.getItem('cookies-accepted');
+  if (!alreadyChose) {
     popup.style.display = 'flex';
     popup.removeAttribute('aria-hidden');
   }
 
-  btn.addEventListener('click', () => {
-    localStorage.setItem('cookies-accepted', 'true');
+  function closePopup() {
     popup.style.display = 'none';
     popup.setAttribute('aria-hidden', 'true');
+  }
+
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('cookie-choice', 'accepted');
+    closePopup();
   });
+
+  if (declineBtn) {
+    declineBtn.addEventListener('click', () => {
+      localStorage.setItem('cookie-choice', 'declined');
+      closePopup();
+    });
+  }
 })();
 
 log('initialized · DEBUG=' + DEBUG);

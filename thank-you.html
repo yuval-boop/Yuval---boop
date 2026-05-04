@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,8 @@
   <meta name="description" content="תודה שהצטרפת — המדיטציה נשלחה למייל שלך.">
   <meta name="robots" content="noindex">
 
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23D4AF37'/%3E%3C/svg%3E">
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23D4AF37'/%3E%3C/svg%3E">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +30,16 @@
       position: relative;
       z-index: 2;
     }
-    .ty-card { max-width: 520px; }
+
+    .ty-card {
+      max-width: 520px;
+    }
+
     .ty-heart {
       font-size: 2.4rem;
       margin-bottom: 12px;
     }
+
     .ty-title {
       font-family: var(--font-sans);
       font-weight: 700;
@@ -44,12 +51,14 @@
       -webkit-text-fill-color: transparent;
       color: transparent;
     }
+
     .ty-sub {
       font-size: 1.05rem;
       color: var(--text-secondary);
       line-height: 1.7;
       margin-bottom: 32px;
     }
+
     .ty-btn {
       display: inline-block;
       min-height: 48px;
@@ -62,10 +71,12 @@
       box-shadow: var(--shadow-cta);
       transition: box-shadow .25s var(--ease), transform .2s var(--ease);
     }
+
     .ty-btn:hover {
       box-shadow: var(--shadow-cta-hover);
       transform: translateY(-2px);
     }
+
     .ty-bg-glow {
       position: fixed;
       top: -15%;
@@ -78,40 +89,57 @@
     }
   </style>
 </head>
+
 <body class="theme-light">
 
-<div class="ty-bg-glow" aria-hidden="true"></div>
+  <div class="ty-bg-glow" aria-hidden="true"></div>
 
-<main class="ty-wrap">
-  <div class="ty-card">
-    <div class="ty-heart" aria-hidden="true">❤️</div>
-    <h1 class="ty-title">תודה איזה כיף שיצאנו לדרך מדהימה ביחד!</h1>
-    <p class="ty-sub">
-      המדיטציה שלך מוכנה — לחצי על הכפתור למטה כדי להאזין עכשיו.
-    </p>
-
-    <a href="https://drive.google.com/file/d/1iioqOC5udUx_r3HInMZ8hMhhLs_XQy-J/view?ts=69f8a053"
-       target="_blank"
-       rel="noopener noreferrer"
-       class="ty-btn"
-       style="margin-bottom: 32px; font-size: 1.1rem; padding: 16px 36px;">
-      🎧 האזיני למדיטציה עכשיו
-    </a>
-
-    <div class="community-box" style="background: var(--bg-surface); border: 1px solid var(--border-gold); padding: 24px; border-radius: 20px; margin-bottom: 24px; box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);">
-      <h2 style="font-size: 1.35rem; color: var(--accent-gold); margin-bottom: 8px;">זה הזמן להצטרף לקהילת השפע!</h2>
-      <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 20px;">
-        כבר נרשמת? אני רוצה להזמין אותך לקבוצת הוואטסאפ השקטה והמיוחדת שלי, שם אני משתפת מסרים יומיים לזימון תודעת שפע, כלים מעשיים ותכנים בלעדיים רק לחברות הקהילה.
+  <main class="ty-wrap">
+    <div class="ty-card">
+      <div class="ty-heart" aria-hidden="true">❤️</div>
+      <h1 class="ty-title">תודה איזה כיף שיצאנו לדרך מדהימה ביחד!</h1>
+      <p class="ty-sub">
+        המדיטציה שלך מוכנה! לחצי על הכפתור למטה כדי להאזין עכשיו.
       </p>
-      <a href="https://chat.whatsapp.com/DeTyZC5s6hk3xqOpxZkaum?mode=gi_t" class="ty-btn" style="background: var(--cta-gradient); color: #1A1410; display: flex; align-items: center; justify-content: center; gap: 10px;">
-        <svg style="width: 22px; height: 22px; fill: #1A1410;" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.405-.883-.733-1.48-1.638-1.653-1.935-.173-.298-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-        אני רוצה להיות חלק מהקהילה
-      </a>
-    </div>
 
-    <a href="index.html" class="ty-btn" style="background: transparent; border: 1px solid var(--border-gold); box-shadow: none; color: var(--text-secondary);">חזרה לדף הבית</a>
-  </div>
-</main>
+      <div class="video-wrap">
+        <div class="video-banner">לחצי PLAY כדי להפעיל את המדיטציה 👇</div>
+        <div class="video-stage">
+          <iframe class="hero-video" title="מדיטציית השפע והכסף"
+            src="https://player.mediadelivery.net/embed/653264/3e02b941-7307-4e4d-b627-a71b6fd02620?autoplay=false&loop=false&muted=false&preload=true&responsive=true"
+            style="border:0;position:absolute;top:0;left:0;right:0;height:100%;width:100%;"
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" allowfullscreen="true">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="community-box"
+        style="background: var(--bg-surface); border: 1px solid var(--border-gold); padding: 24px; border-radius: 20px; margin-bottom: 24px; box-shadow: 0 0 30px rgba(212, 175, 55, 0.15);">
+        <h2 style="font-size: 1.35rem; color: var(--accent-gold); margin-bottom: 8px;">המדיטציה היא רק הצעד הראשון...
+        </h2>
+        <p style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 20px;">
+          המדיטציה שאת עומדת לעשות קריטית, אבל כדי לייצר שינוי אמיתי שבאמת נשאר, חזרתיות היא מפתח חשוב לזימון ולתכנות
+          מחדש של התת-מודע.<br><br>
+          פתחתי קבוצת מסרים שקטה שנועדה בדיוק לזה: חיזוקים יומיומיים וכלים עוצמתיים שיחדירו את התדר החדש לתודעה שלך,
+          כדי
+          שתצליחי להגשים את המציאות שאת חולמת לחיות.
+        </p>
+        <a href="https://chat.whatsapp.com/DeTyZC5s6hk3xqOpxZkaum?mode=gi_t" class="ty-btn"
+          style="background: var(--cta-gradient); color: #1A1410; display: flex; align-items: center; justify-content: center; gap: 10px;">
+          <svg style="width: 22px; height: 22px; fill: #1A1410;" viewBox="0 0 24 24" aria-hidden="true">
+            <path
+              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.405-.883-.733-1.48-1.638-1.653-1.935-.173-.298-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+          </svg>
+          אני רוצה להיות חלק מהקהילה
+        </a>
+      </div>
+
+      <a href="index.html" class="ty-btn"
+        style="background: transparent; border: 1px solid var(--border-gold); box-shadow: none; color: var(--text-secondary);">חזרה
+        לדף הבית</a>
+    </div>
+  </main>
 
 </body>
+
 </html>

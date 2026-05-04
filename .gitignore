@@ -9,3 +9,6 @@ Thumbs.db
 .claude/settings.local.json
 .claude/worktrees/
 assets/videos/
+
+# Local Netlify folder
+.netlify

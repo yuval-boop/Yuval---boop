@@ -406,19 +406,24 @@ body.theme-light .video-banner {
 }
 
 /* ---------- CTA button ---------- */
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: var(--shadow-cta), 0 0 0 0 rgba(212, 175, 55, 0.55); }
+  50%       { box-shadow: var(--shadow-cta), 0 0 0 12px rgba(212, 175, 55, 0); }
+}
 .hero-cta-btn {
   display: inline-block;
   margin-top: 28px;
-  padding: 16px 36px;
-  border-radius: 12px;
+  padding: 18px 44px;
+  border-radius: 14px;
   background: var(--cta-gradient);
   color: #1A1410;
   font-family: inherit;
-  font-size: 1.1rem;
-  font-weight: 700;
+  font-size: 1.2rem;
+  font-weight: 800;
   text-decoration: none;
-  box-shadow: var(--shadow-cta);
+  box-shadow: var(--shadow-cta), 0 0 0 0 rgba(212, 175, 55, 0.55);
   transition: box-shadow .25s var(--ease), transform .2s var(--ease);
+  animation: ctaPulse 2.4s ease-in-out infinite;
   position: relative;
   overflow: hidden;
   isolation: isolate;

@@ -12,8 +12,8 @@ export default async function handler(req, res) {
 
   try {
     const data = await resend.emails.send({
-      from: 'Amit <amit@amitweb.com>', // Update this once you verify a domain in Resend
-      to: ['amityst12@gmail.com'], // Sent to Yuval (or developer)
+      from: 'amit@amitweb.com',
+      to: 'amityst12@gmail.com',
       subject: 'ליד חדש נרשם למדיטציית הכסף!',
       html: `
         <div dir="rtl" style="font-family: sans-serif; color: #1f1812;">

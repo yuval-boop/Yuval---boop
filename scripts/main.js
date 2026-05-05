@@ -95,6 +95,7 @@ async function handleSubmit(e) {
   }
 
   try {
+    // שליחה לשרת Netlify (מיילים)
     const res = await fetch('/api/send', {
       method: 'POST',
       headers: {
@@ -105,6 +106,22 @@ async function handleSubmit(e) {
 
     if (!res.ok) {
       throw new Error(`Server returned ${res.status}`);
+    }
+
+    // שליחה ל-Google Sheets (Webhook)
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        // mode: 'no-cors' מונע שגיאות אבטחה של דפדפנים מול גוגל סקריפט
+        mode: 'no-cors', 
+        headers: {
+          'Content-Type': 'text/plain;charset=utf-8',
+        },
+        body: JSON.stringify(payload)
+      });
+      log('Google Sheets Webhook triggered');
+    } catch (sheetErr) {
+      log('Google Sheets sending failed:', sheetErr);
     }
 
     log('fetch completed (Success)');

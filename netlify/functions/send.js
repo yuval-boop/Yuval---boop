@@ -73,7 +73,7 @@ exports.handler = async (event) => {
 
     const ownerEmail = resend.emails.send({
       from: 'amit@amitweb.com',
-      to: ['Yuvilevlev@gmail.com'],
+      to: ['Yuval144.888@gmail.com'],
       subject: 'ליד חדש נרשם למדיטציית הכסף!',
       html: `
         <div dir="rtl" style="font-family: sans-serif; color: #1f1812;">

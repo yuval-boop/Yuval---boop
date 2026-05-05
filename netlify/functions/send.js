@@ -72,7 +72,7 @@ exports.handler = async (event) => {
     }
 
     const ownerEmail = resend.emails.send({
-      from: 'amit@amitweb.com',
+      from: 'יובל אלקובי <amit@amitweb.com>',
       to: ['Yuval144.888@gmail.com'],
       subject: 'ליד חדש נרשם למדיטציית הכסף!',
       html: `
@@ -92,7 +92,7 @@ exports.handler = async (event) => {
     });
 
     const userEmail = resend.emails.send({
-      from: 'amit@amitweb.com',
+      from: 'יובל אלקובי <amit@amitweb.com>',
       to: [email],
       subject: `היי ${name}, המדיטציה שלך מוכנה ✨`,
       html: `<!DOCTYPE html>

@@ -4,7 +4,7 @@
    Debug: append ?debug=1 to URL
    ================================================================ */
 
-const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzXKOtap7Vv6fjsk-IORH-leJmxRpv3dsxaPBbe1Lnmi_wONWmFrREno47tcTSK_k_nkA/exec';
+const WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzGh60MG3cl-ecpnEc14gQTtrS0qFXS6pQ3dkgG48e1JMyieHtaCoTORi7sVld2OKjK/exec';
 const REDIRECT_URL = 'thank-you.html';
 
 const DEBUG = new URLSearchParams(location.search).get('debug') === '1';

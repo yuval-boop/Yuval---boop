@@ -180,7 +180,13 @@ exports.handler = async (event) => {
         <!-- Footer -->
         <tr>
           <td style="background:#F7F3EC;padding:20px 32px;text-align:center;border-top:1px solid #E8D9A8;">
-            <p style="margin:0;color:#9B8A6A;font-size:12px;">קיבלת מייל זה כי נרשמת למדיטציית השפע והכסף באתר yuval-alkobi.com</p>
+            <p style="margin:0;color:#9B8A6A;font-size:12px;margin-bottom:8px;">קיבלת מייל זה כי נרשמת למדיטציית השפע והכסף באתר yuval-alkobi.com</p>
+            <p style="margin:0;color:#9B8A6A;font-size:12px;">
+              לא מעוניינת לקבל ממני יותר הודעות? 
+              <a href="mailto:Yuval144.888@gmail.com?subject=%D7%91%D7%A7%D7%A9%D7%94%20%D7%9C%D7%94%D7%A1%D7%A8%D7%94%20%D7%9E%D7%A8%D7%A9%D7%99%D7%9E%D7%AA%20%D7%94%D7%AA%D7%A4%D7%95%D7%A6%D7%94&body=%D7%94%D7%99%D7%99%20%D7%99%D7%95%D7%91%D7%9C%2C%0A%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%A1%D7%99%D7%A8%20%D7%90%D7%AA%20%D7%A2%D7%A6%D7%9E%D7%99%20%D7%9E%D7%A8%D7%A9%D7%99%D7%9E%D7%AA%20%D7%94%D7%AA%D7%A4%D7%95%D7%A6%D7%94." style="color:#8B6914;text-decoration:underline;">
+                לחצי כאן להסרה (שליחת בקשה למייל)
+              </a>
+            </p>
           </td>
         </tr>
 

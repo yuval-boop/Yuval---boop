@@ -5,25 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#0F0B08">
-  <title>תהליך הליווי האישי · יובל אלקובי</title>
+  <title>שפת היקום · תהליך הליווי של יובל אלקובי</title>
   <meta name="description"
-    content="תהליך ליווי אישי עם יובל אלקובי — לחיות את זה. שינוי אמיתי מבפנים החוצה.">
-  <meta name="keywords" content="ליווי אישי, יובל אלקובי, תהליך אישי, NLP, שינוי, התפתחות אישית">
+    content="תהליך ליווי אישי עם יובל אלקובי — ללמוד את שפת היקום ולצאת מהלופ. שיחת היכרות ללא עלות.">
+  <meta name="keywords" content="ליווי אישי, יובל אלקובי, שפת היקום, NLP, שינוי, התפתחות אישית, שפע">
   <link rel="canonical" href="https://yuval-alkobi.com/livui">
 
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://yuval-alkobi.com/livui">
-  <meta property="og:title" content="תהליך הליווי האישי · יובל אלקובי">
+  <meta property="og:title" content="שפת היקום · תהליך הליווי של יובל אלקובי">
   <meta property="og:description"
-    content="תהליך ליווי אישי עם יובל אלקובי — לחיות את זה. שינוי אמיתי מבפנים החוצה.">
+    content="יש ליקום שפה. ברגע שלומדים אותה — הכל משתנה. שיחת היכרות ללא עלות.">
   <meta property="og:image" content="https://yuval-alkobi.com/assets/images/OG.jpg">
   <meta property="og:site_name" content="יובל אלקובי · ליווי אישי">
   <meta property="og:locale" content="he_IL">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="תהליך הליווי האישי · יובל אלקובי">
-  <meta name="twitter:description"
-    content="תהליך ליווי אישי עם יובל אלקובי — לחיות את זה. שינוי אמיתי מבפנים החוצה.">
+  <meta name="twitter:title" content="שפת היקום · תהליך הליווי של יובל אלקובי">
+  <meta name="twitter:description" content="יש ליקום שפה. ברגע שלומדים אותה — הכל משתנה.">
   <meta name="twitter:image" content="https://yuval-alkobi.com/assets/images/OG.jpg">
 
   <link rel="icon"
@@ -38,8 +37,8 @@
         "@type": "WebSite",
         "@id": "https://yuval-alkobi.com/#website",
         "url": "https://yuval-alkobi.com/",
-        "name": "מדיטציית הכסף",
-        "description": "דף הבית של מדיטציית הכסף מאת יובל אלקובי",
+        "name": "יובל אלקובי · שפת היקום",
+        "description": "תהליך הליווי האישי של יובל אלקובי",
         "inLanguage": "he-IL"
       },
       {
@@ -60,9 +59,213 @@
 
   <link rel="stylesheet" href="styles/main.css?v=32">
   <style>
+    /* ── וידאו רוחבי ── */
     .video-wrap { max-width: 720px; }
-    @media (min-width: 768px) { .video-wrap { max-width: 720px; } }
     .video-stage { aspect-ratio: 16 / 9; }
+
+    /* ── תוספות לדף הליווי ── */
+    .pre-headline-badge {
+      display: inline-block;
+      padding: 6px 18px;
+      border: 1px solid var(--border-gold);
+      border-radius: 999px;
+      color: var(--accent-gold-light);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+      background: rgba(212, 175, 55, 0.08);
+    }
+    .story-section .container { max-width: 720px; }
+    .story-kicker {
+      font-size: clamp(1.8rem, 5vw, 2.4rem);
+      font-weight: 800;
+      color: var(--accent-gold);
+      text-align: center;
+      margin: 0 0 18px;
+    }
+    .story-text {
+      font-size: 1.1rem;
+      line-height: 1.75;
+      color: var(--text-primary);
+      text-align: center;
+      margin: 0 auto 18px;
+    }
+    .story-text strong { color: var(--accent-gold-light); }
+    .story-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      max-width: 560px;
+      margin: 26px auto;
+    }
+    .story-photos figure { margin: 0; }
+    .story-photos img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: var(--radius);
+      border: 1px solid var(--border-gold);
+      box-shadow: var(--shadow-card);
+      aspect-ratio: 3 / 4;
+    }
+    .story-photos figcaption {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 6px;
+    }
+    .cta-repeat { text-align: center; margin: 34px 0 6px; }
+    .pain-list {
+      list-style: none;
+      padding: 0;
+      max-width: 620px;
+      margin: 22px auto;
+      display: grid;
+      gap: 12px;
+    }
+    .pain-list li {
+      position: relative;
+      padding: 14px 46px 14px 18px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-gold);
+      border-right: 3px solid var(--accent-gold);
+      border-radius: var(--radius);
+      color: var(--text-primary);
+      line-height: 1.6;
+      text-align: right;
+    }
+    .pain-list li::before {
+      content: "✗";
+      position: absolute;
+      right: 16px;
+      top: 14px;
+      color: #b3593d;
+      font-weight: 700;
+    }
+    .path-cards {
+      display: grid;
+      gap: 20px;
+      max-width: 760px;
+      margin: 30px auto 10px;
+    }
+    @media (min-width: 768px) { .path-cards { grid-template-columns: 1fr 1fr; } }
+    .path-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius);
+      padding: 26px 22px;
+      box-shadow: var(--shadow-card);
+      display: flex;
+      flex-direction: column;
+    }
+    .path-card.featured { border-color: var(--accent-gold); }
+    .path-tag {
+      align-self: center;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: #0F0B08;
+      background: var(--gold-gradient);
+      border-radius: 999px;
+      padding: 3px 14px;
+      margin-bottom: 12px;
+    }
+    .path-name {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--accent-gold-light);
+      text-align: center;
+      margin: 0 0 4px;
+    }
+    .path-desc {
+      color: var(--text-secondary);
+      text-align: center;
+      font-size: 0.95rem;
+      margin: 0 0 16px;
+    }
+    .path-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .path-list li {
+      position: relative;
+      padding-right: 26px;
+      color: var(--text-primary);
+      line-height: 1.55;
+    }
+    .path-list li::before {
+      content: "✦";
+      position: absolute;
+      right: 0;
+      color: var(--accent-gold);
+    }
+    .path-note {
+      text-align: center;
+      color: var(--text-secondary);
+      max-width: 620px;
+      margin: 18px auto 0;
+      line-height: 1.6;
+    }
+    .fit-grid {
+      display: grid;
+      gap: 20px;
+      max-width: 760px;
+      margin: 26px auto 0;
+    }
+    @media (min-width: 768px) { .fit-grid { grid-template-columns: 1fr 1fr; } }
+    .fit-col {
+      background: var(--bg-surface);
+      border-radius: var(--radius);
+      padding: 24px 22px;
+      border: 1px solid var(--border-gold);
+    }
+    .fit-col h3 {
+      text-align: center;
+      margin: 0 0 14px;
+      font-size: 1.2rem;
+      color: var(--text-primary);
+    }
+    .fit-col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+    .fit-col li { position: relative; padding-right: 26px; line-height: 1.55; color: var(--text-primary); }
+    .fit-col.no li::before { content: "✕"; position: absolute; right: 0; color: #b3593d; }
+    .fit-col.yes li::before { content: "✓"; position: absolute; right: 0; color: var(--accent-gold); }
+    .fit-verdict { text-align: center; margin-top: 12px; color: var(--text-secondary); font-size: 0.95rem; }
+    .faq-list { max-width: 680px; margin: 26px auto 0; display: grid; gap: 12px; }
+    .faq-list details {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius);
+      padding: 16px 20px;
+    }
+    .faq-list summary {
+      cursor: pointer;
+      font-weight: 700;
+      color: var(--text-primary);
+      list-style: none;
+      position: relative;
+      padding-left: 24px;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: "+";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent-gold);
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+    .faq-list details[open] summary::after { content: "−"; }
+    .faq-list details p { color: var(--text-secondary); line-height: 1.65; margin: 12px 0 0; }
+    .results-disclaimer {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      max-width: 560px;
+      margin: 18px auto 0;
+      line-height: 1.5;
+    }
+    .scarcity-line {
+      text-align: center;
+      color: var(--accent-gold-light);
+      font-size: 0.95rem;
+      margin-top: 12px;
+    }
   </style>
 </head>
 
@@ -73,9 +276,9 @@
   <header class="site-header">
     <div class="container">
       <div class="header-spacer"></div>
-      <a href="livui.html" class="brand">תהליך הליווי</a>
+      <a href="livui.html" class="brand">שפת היקום</a>
       <div class="header-social">
-        <a href="https://wa.me/972544450035?text=%D7%94%D7%99%D7%99!%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%94%D7%9E%D7%93%D7%99%D7%98%D7%A6%D7%99%D7%94%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%90%D7%95%D7%93%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%A0%D7%AA%20%F0%9F%98%8A"
+        <a href="https://wa.me/972544450035?text=%D7%94%D7%99%D7%99!%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%AA%D7%94%D7%9C%D7%99%D7%9A%20%D7%94%D7%9C%D7%99%D7%95%D7%95%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%90%D7%95%D7%93%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%A0%D7%AA%20%F0%9F%98%8A"
           target="_blank" rel="noopener noreferrer" class="social-icon-btn whatsapp-icon"
           aria-label="שלחי לי הודעה בוואטסאפ">
           <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -96,6 +299,7 @@
 
   <main>
 
+    <!-- ═══════════ HERO — Hook ═══════════ -->
     <section class="hero">
       <div class="hero-glow" aria-hidden="true"></div>
       <div class="hero-rays" aria-hidden="true">
@@ -106,9 +310,11 @@
         <div class="ray ray-5"></div>
       </div>
       <div class="container">
-        <h1 class="hero-title">לחיות את זה</h1>
-        <p class="hero-sub">לא עוד תהליך ליווי..<br>שיטה מוכחת כדי שתחיי את החיים שאת חולמת עליהם</p>
-        <p class="hero-cta-line">יצאתי ממינוס לפלוס, מדירת 3 שותפים לדירה לבד... חסכונות, תיק השקעות ומצאתי את הייעוד שלי — והכל בזכות הכלים המטורפים שהיום אני מעבירה בתהליך הליווי שלי</p>
+        <span class="pre-headline-badge">לנשים שעשו כבר "את כל העבודה" — ועדיין מרגישות תקועות</span>
+        <h1 class="hero-title">שפת היקום</h1>
+        <p class="hero-sub">יש ליקום שפה. הוא מדבר איתנו כל הזמן —<br>
+          ונשים לא מצליחות לזמן כי הן פשוט לא מכירות אותה.</p>
+        <p class="hero-cta-line">ברגע שלמדתי לדבר אותה, יצאתי בחודשיים ממינוס לפלוס<br>ומחיים תקועים לחיים שחלמתי עליהם 🪄</p>
 
         <div class="video-wrap">
           <div class="video-banner">לחצי PLAY כדי להפעיל את הסרטון 👇</div>
@@ -122,59 +328,76 @@
           </div>
         </div>
 
-        <a href="#form" class="hero-cta-btn">אני רוצה להגשים את החיים שאני חולמת עליהם</a>
-
+        <a href="#form" class="hero-cta-btn">אני רוצה ללמוד את שפת היקום 👇</a>
+        <p class="scarcity-line">הליווי הוא אישי — מספר המקומות בכל חודש מוגבל</p>
       </div>
     </section>
 
     <hr class="divider" aria-hidden="true">
 
-    <section class="about">
+    <!-- ═══════════ PAIN — הכאב של הקוראת ═══════════ -->
+    <section class="about story-section">
       <div class="about-glow" aria-hidden="true"></div>
       <div class="container">
-        <div class="about-flex" style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-          <div class="about-text">
-            <h2 class="about-title">היי, אני יובל</h2>
-            <p class="about-lede">לפני שהגעתי לאן שאני היום, עברתי מסע. אלה הצעדים שעשיתי בדרך:</p>
-          </div>
-        </div>
+        <h2 class="section-title">אני יודעת בדיוק איך זה מרגיש</h2>
+        <p class="story-text"><strong>כי עד לפני שנה וחצי הייתי שם — ויותר גרוע..</strong></p>
+        <ul class="pain-list">
+          <li>אולי את קוראת ספרים, שומעת פודקאסטים, אולי אפילו עברת סדנאות וריטריטים — את יודעת "הכל", אבל <strong>החשבון עדיין במינוס</strong>.</li>
+          <li>את קמה כל בוקר לעבודה שמרוקנת אותך, ויודעת עמוק בפנים שנועדת ליותר.</li>
+          <li>את עושה "הכל נכון" — מדמיינת, כותבת מטרות, מודה על מה שיש — והמציאות פשוט לא זזה.</li>
+          <li>מחשבות שליליות מציפות אותך: שאולי את לא עושה מספיק, שאת לא מספיק.. שאולי זה לעולם לא יקרה.</li>
+          <li>וכל פעם שמישהי אחרת מצליחה, מתגנבת המחשבה: <strong>"למה לכולן מצליח — ולי לא?"</strong></li>
+        </ul>
+        <p class="story-text"><strong>ואני כאן להגיד לך בוודאות:</strong><br>
+          <strong>את לא אשמה!</strong><br>
+          מה שהיה חסר לך זה רק לחווט את התת-מודע מחדש — ולהבין איך לדבר עם היקום.</p>
+        <p class="story-text">ואיך אני יודעת? <strong>כי הייתי בדיוק שם.</strong></p>
+      </div>
+    </section>
 
-        <ol class="timeline">
-          <li class="timeline-item">
-            <span class="timeline-dot">1</span>
-            <h3 class="timeline-title">7 שנים של חקירה וחיפוש</h3>
-            <p class="timeline-desc">צללתי למסע למידה עצמאי ואינטנסיבי שחיבר בין עולמות: מחכמת הקבלה והרוח, NLP,
-              פסיכולוגיה (באופן עצמאי), ועד למדעי המוח וחוקי היקום. חקרתי איך המציאות שלנו מתעצבת, מהם חוקי הזימון, ומעל
-              הכל, התחלתי לפצח את המסתורין של התת-מודע.</p>
-          </li>
-          <li class="timeline-item">
-            <span class="timeline-dot">2</span>
-            <h3 class="timeline-title">התת-מודע (NLP מאסטר)</h3>
-            <p class="timeline-desc">במהלך המסע גיליתי את התת-מודע! הבנתי את הכוח שלו לשנות את המציאות, והבנתי שאני
-              חייבת גישה ישירה ל"מנוע" שמנהל אותנו. המשכתי ללימודי מאסטר ב-NLP, והתחלתי להעמיק איך לגשת לעוצמות של
-              התת-מודע ולעבוד איתו בצורה מכוונת, כדי להתחיל לבנות את החיים שבאמת רציתי.</p>
-          </li>
-          <li class="timeline-item">
-            <span class="timeline-dot">3</span>
-            <h3 class="timeline-title">הסיפור שהגוף מספר</h3>
-            <p class="timeline-desc">הבנתי שלחקור את התודעה זה כוח אינסופי, אבל החתיכה החסרה מהפאזל היה הגוף. הרי אנחנו
-              לא רק נשמות, קיבלנו גוף, והגוף הזה הוא מערכת חכמה שמספרת סיפור משלה. התחלתי להעמיק בחקר שפת הגוף ובמערכות
-              הפיזיולוגיות שעוזרות לנו לגלות מי אנחנו באמת, ואיך הגוף מדבר את המחשבות שאנחנו לא שמים לב אליהן.</p>
-          </li>
-          <li class="timeline-item">
-            <span class="timeline-dot">4</span>
-            <h3 class="timeline-title">לדעת הכל, ולהישאר במקום</h3>
-            <p class="timeline-desc">למרות שצברתי המון ידע ואפילו הצלחתי לזמן דברים קטנים, המציאות שלי נשארה תקועה.
-              הזהות הפנימית לא השתנתה, ומצאתי את עצמי בלופ מתסכל: עמוק בתוך המינוס, בחיים שלא באמת רציתי, ועם ארגז כלים
-              מלא בתאוריה, אבל בלי שום דרך מעשית להוריד אותה לקרקע ולייצר שינוי אמיתי.</p>
-          </li>
-          <li class="timeline-item">
-            <span class="timeline-dot">5</span>
-            <h3 class="timeline-title">התחלתי טיפול עם מטפלת חדשה</h3>
-            <p class="timeline-desc">היא עזרה לי להבין איך ליישם את כל הידע שצברתי, ובנוסף הכניסה לחיי כלים חדשים ועוצמתיים שתוך חודשיים בלבד! שיניתי את החיים שלי ויצאתי ממינוס לפלוס, חיסכון ותיק השקעות, מדירת 3 שותפים לדירה לבד, מתת משקל לגוף החלומות, ומעבודה משרדית וחונקת לעבודה מלאה בייעוד שלי. התחלתי להשתמש בכלים האלה כל יום, עד שפיתחתי ובניתי את תהליך הליווי שלי בעזרתה של המטפלת שלי — שכולל בתוכו את כל הכלים בצורה משודרגת, עם כל הדברים שעשיתי מהצד כדי להאיץ את השינוי והתהליך.</p>
-            <p class="timeline-emphasis">״ ובחודשיים בלבד החיים שלי השתנו מקצה לקצה ״</p>
-          </li>
-        </ol>
+    <hr class="divider" aria-hidden="true">
+
+    <!-- ═══════════ STORY — רגע השפל עם התמונות ═══════════ -->
+    <section class="about story-section">
+      <div class="container">
+        <h2 class="story-kicker">ותביני...</h2>
+        <p class="story-text">
+          גם אחרי 7 שנים שחקרתי את חכמת הקבלה, NLP מאסטר, קאוצ׳ינג, שפת גוף<br>
+          ועשרות ריטריטים וסדנאות —<br>
+          מצאתי את עצמי עם כל הידע בראש, <strong>אבל חיה במציאות של הישרדות.</strong>
+        </p>
+        <p class="story-text">
+          עבדתי במוקד מכירות, שכירה ממורמרת, כל יום מ-9:00 עד 18:00,<br>
+          בלי אנרגיות, מחכה ליום חמישי לנוח — <strong>ובלי כסף...</strong>
+        </p>
+        <div class="story-photos">
+          <!-- שמרי את שתי התמונות בשמות האלה בתיקייה assets/images -->
+          <figure>
+            <img src="moked-1.jpeg" alt="יובל במוקד המכירות, עם אוזניות" loading="lazy"
+              onerror="this.closest('figure').style.display='none'">
+          </figure>
+          <figure>
+            <img src="moked-2.jpeg" alt="יובל ברגע שפל בתקופת המוקד" loading="lazy"
+              onerror="this.closest('figure').style.display='none'">
+          </figure>
+        </div>
+        <p class="story-text">
+          הייתי במינוס של 30 אלף שקל, עם אזהרה של הוצאה לפועל,<br>
+          גרה בדירת 3 שותפים — עם ארגז כלים מלא בתיאוריה <strong>ואפס הגשמה</strong>.
+        </p>
+        <p class="story-text">
+          ידעתי "הכל" על תודעה. וזה בדיוק מה ששבר אותי:<br>
+          <strong>אם אני יודעת כל כך הרבה — למה החיים שלי נשארים אותו דבר?<br>
+          מה אני מפספסת?</strong>
+        </p>
+        <p class="story-text">
+          ואז, בטיפול עם מטפלת חדשה, נפל לי האסימון ששינה לי את החיים:<br>
+          נחשפתי לכלים מטורפים שהורידו לי את הידע למציאות,<br>
+          והכי חשוב — התחלתי לשים לב שכשאני אומרת מילים מסוימות, דברים מתגשמים.<br>
+          וכשאני אומרת מילים אחרות — הכל נתקע.<br>
+          <strong>ליקום יש שפה. והתחלתי ללמוד אותה.</strong>
+        </p>
+        <p class="timeline-emphasis">״ ואחרי 7 שנים של ניסוי וטעייה —<br>בחודשיים בלבד החיים שלי השתנו מקצה לקצה ״</p>
 
         <p class="about-bridge">והתוצאה?</p>
 
@@ -182,11 +405,12 @@
           <div class="compare-col before">
             <p class="compare-label">אז</p>
             <ul class="compare-list">
-              <li>מינוס קבוע, חובות והלוואות</li>
-              <li>תחושת לופ שאי אפשר לצאת ממנו</li>
+              <li>מינוס 30 אלף, חובות ואזהרת הוצאה לפועל</li>
+              <li>לא טסתי מעולם ומפחדת להעביר את האשראי בסופר</li>
+              <li>שכירה ממורמרת במוקד מכירות</li>
               <li>דירת 3 שותפים</li>
               <li>שנים בתת משקל ותסכול מהגוף</li>
-              <li>תקועה באותם חיים, הרבה תיאוריה<br>אפס הגשמה</li>
+              <li>הרבה תיאוריה, אפס הגשמה</li>
             </ul>
           </div>
           <div class="compare-col after">
@@ -197,43 +421,45 @@
               <li>סנכרון עם המציאות, בלי מאבק</li>
               <li>דירה לבד של 70 מטר עם שתי מרפסות</li>
               <li>הגוף שחלמתי עליו</li>
-              <li>מגשימה את הייעוד, הידע הופך לתוצאות ושפע כלכלי</li>
+              <li>מתעסקת בייעוד שלי</li>
             </ul>
           </div>
         </div>
 
-        <blockquote class="compare-quote">"כל מה שאישה צריכה זה להסיר את העננה של דאגות מכסף, ורק אז היא יכולה להתמקד
-          בחיים שהיא חולמת עליהם."</blockquote>
+        <blockquote class="compare-quote">"את לא אשמה. כל מה שהיה חסר לך זה לדעת את שפת היקום ולהשתמש בה —
+          כי ברגע שתסירי מעצמך את עננת הדאגות, תוכלי באמת לחיות את החיים שאת חולמת עליהם."</blockquote>
 
-      </div>
-    </section>
+        <p class="results-disclaimer">התוצאות המתוארות בדף הן החוויה האישית שלי ושל משתתפות בתהליך, ואינן מהוות הבטחה לתוצאה מסוימת. התוצאות תלויות ביישום אישי.</p>
 
-    <hr class="divider" aria-hidden="true">
-
-    <section class="tiktok-section">
-      <div class="tiktok-glow" aria-hidden="true"></div>
-      <div class="container">
-        <h2 class="tiktok-title">מעל 1600 אנשים ביקשו את המדיטציה</h2>
-        <p class="tiktok-sub">שלחתי אותה בכתב לכמה שיכלתי, אבל לא הספקתי להגיע לכולם.<br>אז החלטתי להקליט ולשחרר אותה
-          בחינם<br>כדי שהמדיטציה תגיע לכמה שיותר עיניים.</p>
-        <figure class="tiktok-proof">
-          <img src="assets/images/tiktok-proof.jpeg"
-            alt="צילום מסך מחשבון הטיקטוק של יובל אלקובי - 42 אלף צפיות, 1600 תגובות ו-788 שמירות" width="523"
-            height="900" loading="lazy">
-        </figure>
-        <div class="tiktok-stats">
-          <span class="stat-badge">42,000+ צפיות</span>
-          <span class="stat-badge">1,600+ תגובות</span>
-          <span class="stat-badge">788 שמירות</span>
+        <div class="cta-repeat">
+          <a href="#form" class="hero-cta-btn">גם אני רוצה לצאת מהלופ 👇</a>
         </div>
       </div>
     </section>
 
     <hr class="divider" aria-hidden="true">
 
+    <!-- ═══════════ BRIDGE — אז איך עושים את זה? ═══════════ -->
+    <section class="about story-section">
+      <div class="container">
+        <h2 class="section-title">אז איך עושים את זה?</h2>
+        <p class="story-text">
+          את כל מה שלמדתי, ניסיתי ושכללתי — הפכתי לתהליך ליווי אישי אחד על אחד,<br>
+          שמשלב את כלי חיווט התת-מודע החזקים ביותר עם <strong>שפת היקום</strong>.
+        </p>
+        <p class="story-text">
+          ואפילו עשיתי פיילוט עם 8 נשים כדי לראות עד כמה התהליך הזה עובד —<br>
+          <strong>והתוצאות שקיבלנו מטורפות 👇</strong>
+        </p>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true">
+
+    <!-- ═══════════ TESTIMONIALS — הוכחה חברתית ═══════════ -->
     <section class="testimonials">
       <div class="container">
-        <h2 class="section-title">השינוי המטורף שנשים מספרות מתהליך הליווי האישי בשילוב המדיטציה</h2>
+        <h2 class="section-title">השינוי המטורף<br>שנשים מספרות מתהליך הליווי<br>׳שפת היקום׳</h2>
         <p class="privacy-note">חלק מהפנים הוסתרו לבקשת המשתתפות ומתוך כבוד לפרטיותן</p>
         <p class="testimonials-intro">לפניכן הצצות שצולמו 'בלייב' מתוך רגעים אמיתיים במפגשי הליווי. הקטעים עלו באישורן
           המלא של המשתתפות.<br>כדי לשמור על הפרטיות והמרחב הבטוח שלהן, חלקם נערכו, אך התוצאות מדברות בעד עצמן.<br>תקשיבו
@@ -312,12 +538,122 @@
 
     <hr class="divider" aria-hidden="true">
 
+    <!-- ═══════════ THE PATH — ההצעה: שני מסלולים ═══════════ -->
+    <section class="about">
+      <div class="container">
+        <h2 class="section-title">שני מסלולים — לפי העומק שאת צריכה</h2>
+
+        <div class="path-cards">
+          <div class="path-card">
+            <p class="path-name">מסלול בוסט ⚡</p>
+            <p class="path-desc">לזינוק ממוקד ומהיר</p>
+            <ul class="path-list">
+              <li>4 מפגשים אישיים בזום, שעה כל אחד</li>
+              <li>הכלים המרכזיים של שפת היקום</li>
+              <li>עבודה ממוקדת על התקיעות המרכזית שלך</li>
+              <li>תרגול מעשי בין המפגשים</li>
+            </ul>
+          </div>
+          <div class="path-card featured">
+            <span class="path-tag">המסלול המלא</span>
+            <p class="path-name">מסלול עומק 🌙</p>
+            <p class="path-desc">לשינוי מקצה לקצה</p>
+            <ul class="path-list">
+              <li>8 מפגשים אישיים בזום, שעה כל אחד</li>
+              <li>ליווי צמוד יד ביד לאורך כל הדרך</li>
+              <li>שיחות זום קבוצתיות פעם בשבועיים</li>
+              <li>כל הכלים — חיווט תת-מודע, גוף ושפת היקום</li>
+              <li>זמינות אליי בין המפגשים</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="path-note">לא בטוחה איזה מסלול מתאים לך? בדיוק בשביל זה יש שיחת היכרות —
+          נבין יחד איפה את, ומה הדרך הנכונה עבורך. בלי לחץ ובלי התחייבות.</p>
+
+        <div class="cta-repeat">
+          <a href="#form" class="hero-cta-btn">אני רוצה שיחת היכרות 👇</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true">
+
+    <!-- ═══════════ FIT — למי זה מתאים ולמי לא ═══════════ -->
+    <section class="about">
+      <div class="container">
+        <h2 class="section-title">חשוב לי שתדעי —<br>הליווי לא מתאים לכולן</h2>
+        <div class="fit-grid">
+          <div class="fit-col no">
+            <h3>אם את...</h3>
+            <ul>
+              <li>מחפשת קסם שיעבוד בשבילך בלי שתצטרכי לתרגל וליישם</li>
+              <li>רוצה עוד תיאוריה בשביל המדף, בלי כוונה להוריד אותה לקרקע</li>
+              <li>לא מוכנה להסתכל פנימה ולעבוד עם התת-מודע שלך</li>
+            </ul>
+            <p class="fit-verdict">כנראה שאנחנו לא מתאימות 🙏</p>
+          </div>
+          <div class="fit-col yes">
+            <h3>אבל אם את...</h3>
+            <ul>
+              <li>יודעת עמוק בפנים שנועדת ליותר, ומוכנה לעשות מה שצריך</li>
+              <li>עייפה מתיאוריה ורוצה סוף סוף שיטה מעשית שמייצרת תוצאות</li>
+              <li>מוכנה להשקיע בעצמך שעה בשבוע ותרגול יומי קצר</li>
+            </ul>
+            <p class="fit-verdict">את בדיוק במקום הנכון ✨</p>
+          </div>
+        </div>
+        <div class="cta-repeat">
+          <a href="#form" class="hero-cta-btn">נשמע כמוני — קחי אותי לשיחה 👇</a>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true">
+
+    <!-- ═══════════ FAQ — שאלות נפוצות ═══════════ -->
+    <section class="about">
+      <div class="container">
+        <h2 class="section-title">שאלות נפוצות</h2>
+        <div class="faq-list">
+          <details>
+            <summary>אין לי רקע ברוחניות או NLP — זה בשבילי?</summary>
+            <p>לגמרי. התהליך בנוי כך שמתחילים מ-0, בקצב שלך. לא צריך שום ידע מוקדם — רק נכונות לתרגל וליישם.</p>
+          </details>
+          <details>
+            <summary>כמה זמן זה דורש ממני?</summary>
+            <p>מפגש של שעה בזום (אחת לשבוע או לפי הקצב שנקבע יחד), ותרגול יומי קצר בין המפגשים. זה תהליך שנבנה כדי להשתלב בחיים אמיתיים ועמוסים.</p>
+          </details>
+          <details>
+            <summary>מה ההבדל בין מסלול בוסט למסלול עומק?</summary>
+            <p>בוסט הוא 4 מפגשים אישיים — זינוק ממוקד לתקיעות מרכזית אחת. עומק הוא 8 מפגשים עם ליווי צמוד יד ביד ושיחות זום קבוצתיות פעם בשבועיים — לשינוי מקצה לקצה. בשיחת ההיכרות נבין יחד מה מתאים לך.</p>
+          </details>
+          <details>
+            <summary>כמה זה עולה?</summary>
+            <p>המחיר משתנה בין המסלולים, ונדבר עליו בפתיחות בשיחת ההיכרות — אחרי שנבין מה את צריכה. השיחה עצמה ללא עלות וללא שום התחייבות.</p>
+          </details>
+          <details>
+            <summary>תוך כמה זמן רואים שינוי?</summary>
+            <p>אצלי השינוי הגדול קרה בחודשיים, וכל אישה מגיעה עם קצב משלה. מה שבטוח — נשים מדווחות על שינוי בתחושה ובמציאות כבר מהמפגשים הראשונים, ככל שמיישמות את הכלים.</p>
+          </details>
+          <details>
+            <summary>מה קורה בשיחת ההיכרות?</summary>
+            <p>שיחה אישית קצרה ביני לבינך: נכיר, נבין איפה את תקועה ומה את רוצה להשיג, ואבדוק אם ואיך התהליך יכול לעזור לך. אם זה לא מתאים — אגיד לך ביושר.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <hr class="divider" aria-hidden="true">
+
+    <!-- ═══════════ FINAL CTA — טופס לשיחת היכרות ═══════════ -->
     <section class="final-cta" id="form">
       <div class="container">
-        <h2 class="final-title">כותרת טופס — ערכי כאן</h2>
-        <p class="final-sub">תת-כותרת טופס — ערכי כאן</p>
+        <h2 class="final-title">הצעד הראשון: שיחת היכרות אישית איתי</h2>
+        <p class="final-sub">השאירי פרטים ואחזור אלייך לשיחה קצרה — נבין יחד איפה את תקועה,
+          ואיזה מסלול יתאים לך. ללא עלות וללא התחייבות 🤍</p>
 
-        <form class="lead-form final-form" data-form="final-cta" novalidate>
+        <form class="lead-form final-form" data-form="livui-discovery" novalidate>
           <div class="field">
             <label for="final-name">שם מלא</label>
             <input type="text" id="final-name" name="name" autocomplete="name" placeholder="שם מלא" required>
@@ -338,15 +674,15 @@
           <label class="consent-field">
             <input type="checkbox" name="consent" class="consent-checkbox" required>
             <span class="consent-text">קראתי ואני מסכים/ה ל<a href="privacy-policy.html" target="_blank"
-                rel="noopener">תקנון האתר ומדיניות הפרטיות</a>, ואני מאשר/ת לשלוח לי את המדיטציה וכן דברי פרסומת ודיוור
-              לפי חוק (אפשר להסיר תמיד). בנוסף, אני מסכים/ה ששליחת הטופס מהווה הסכמה לקבלת שיחת טלפון מיובל או מהצוות שלה.</span>
+                rel="noopener">תקנון האתר ומדיניות הפרטיות</a>, ואני מאשר/ת קבלת שיחת טלפון מיובל או מהצוות שלה
+              לתיאום שיחת ההיכרות, וכן דברי פרסומת ודיוור לפי חוק (אפשר להסיר תמיד).</span>
           </label>
           <button type="submit" class="btn-gold">
-            <span class="btn-label">טקסט כפתור — ערכי כאן</span>
+            <span class="btn-label">קחי אותי לשיחת ההיכרות 🥹</span>
             <span class="btn-spinner" aria-hidden="true"></span>
           </button>
           <p class="form-msg" aria-live="polite"></p>
-          <p class="microcopy">ללא עלות · גישה מיידית למדיטציה</p>
+          <p class="microcopy">השיחה ללא עלות · בלי התחייבות · הליווי אישי ולכן המקומות מוגבלים</p>
         </form>
       </div>
     </section>
@@ -355,7 +691,7 @@
 
   <footer class="site-footer">
     <div class="container">
-      <p class="footer-brand">תהליך הליווי האישי · יובל אלקובי</p>
+      <p class="footer-brand">שפת היקום · תהליך הליווי של יובל אלקובי</p>
       <p class="footer-meta">© 2026 · כל הזכויות שמורות · <a href="privacy-policy.html">מדיניות פרטיות ותנאי שימוש</a> ·
         <a href="accessibility.html">הצהרת נגישות</a>
       </p>
@@ -376,7 +712,7 @@
     </div>
   </div>
 
-  <a href="https://wa.me/972544450035?text=%D7%94%D7%99%D7%99!%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%94%D7%9E%D7%93%D7%99%D7%98%D7%A6%D7%99%D7%94%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%90%D7%95%D7%93%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%A0%D7%AA%20%F0%9F%98%8A"
+  <a href="https://wa.me/972544450035?text=%D7%94%D7%99%D7%99!%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A9%D7%9E%D7%95%D7%A2%20%D7%A2%D7%95%D7%93%20%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A2%D7%9C%20%D7%AA%D7%94%D7%9C%D7%99%D7%9A%20%D7%94%D7%9C%D7%99%D7%95%D7%95%D7%99%2C%20%D7%90%D7%A0%D7%99%20%D7%9E%D7%90%D7%95%D7%93%20%D7%9E%D7%A2%D7%95%D7%A0%D7%99%D7%99%D7%A0%D7%AA%20%F0%9F%98%8A"
     target="_blank" rel="noopener noreferrer" class="floating-whatsapp" aria-label="שלחי הודעה בוואטסאפ">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path
